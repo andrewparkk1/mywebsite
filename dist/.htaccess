@@ -1,12 +1,16 @@
-# mod_rewrite starts here
+# # mod_rewrite starts here
 
-RewriteEngine on
+# RewriteEngine on
 
-#if folder exists, don't run
-RewriteCond %{REQUEST_FILENAME} !-d
+# #if folder exists, don't run
+# RewriteCond %{REQUEST_FILENAME} !-d
 
-# check files for .html extension
-RewriteCond %{REQUEST_FILENAME}\.html -f
+# # check files for .html extension
+# RewriteCond %{REQUEST_FILENAME}\.html -f
 
-#show page that has .html extension
-RewriteRule ^(.*)$ $1.html [NC,L]
+# #show page that has .html extension
+# RewriteRule ^(.*)$ $1.html [NC,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

@@ -9,6 +9,7 @@
 
 :root {
     --ab-me-size: 20rem;
+    --name-font-size: 3.75rem;
 }
 
 :root[color-mode="light"] {
@@ -88,7 +89,7 @@ header {
     flex-direction: row;
     justify-content: center;
     column-gap: 2rem;
-    padding-top: 1rem;
+    padding-top: 1.4rem;
 }
 
 .main-nav {
@@ -175,7 +176,7 @@ footer p {
 
 .home-page-content h1 {
     margin: 0;
-    font-size: 3.75rem;
+    font-size: var(--name-font-size);
     font-weight: 700;
     background-color: blue;
     -webkit-text-fill-color: transparent;
@@ -200,6 +201,11 @@ footer p {
     margin: 0;
 }
 
+.about-link {
+    color: blue;
+    text-decoration: none;
+}
+
 
 /* ABOUT ME */
 
@@ -216,6 +222,9 @@ footer p {
 @media screen and (max-width: 1024px) {
     .image-cropper {
         --ab-me-size: 13rem;
+    }
+    .home-page-content h1 {
+        --name-font-size: 3.4rem;
     }
 }
 

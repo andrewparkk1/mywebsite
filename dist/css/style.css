@@ -420,6 +420,11 @@ input[type="submit"] {
     grid-row: span 4;
 }
 
+.link {
+    text-decoration: none;
+    color: rgb(65,105,225);
+}
+
 
 .project-container {
     border-top-style: solid;

@@ -23,6 +23,15 @@
         ) {
             document.documentElement.setAttribute("color-mode", "dark");
         }
+
+        function CopyToClipboard(id) {
+            var r = document.createRange();
+            r.selectNode(document.getElementById(id));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+        }
     </script>
 </head>
 
@@ -89,13 +98,14 @@
                 <p>Andrew Park</p> -->
 
                 <p>I’m a creator, student, and aspiring entrepreneur based in Kentucky.</p>
-                <p>I am currently a Senior at The Gatton Academy of Mathematics and Science, focusing on computer science. (I'll update you on where I go to college; I'm sure you're excited to find out.) In my spare time, I like to
+                <p>I am currently a Senior at <a href="https://www.wku.edu/academy/" class="link" target="_blank"> The Gatton Academy of Mathematics and Science</a>, focusing on computer science. (I'll update you on where I go to college; I'm sure you're
+                    excited to find out.) In my spare time, I like to
                     <a href="https://andrewparkk.com/projects" class="link"> code </a> and <a href="https://andrewparkk.com/writing" class="link"> write.</a></p>
-                <p>I am now on a journey to build something new. My goals are bigger now, but I still remind myself to keep on doing things I love. </p>
-                <p>If you ever want to reach out to me, send a note to andysampark@gmail.com or find me on Twitter.</p>
+                <p>I'm now on a journey to build something new. My goals are bigger than before, but I still remind myself to keep on doing things I love. </p>
+                <p>If you ever want to reach out to me, send a note to <a href="#" id="sample" class="link" onclick="CopyToClipboard('sample');return false;"> andysampark@gmail.com</a> or find me on <a href="https://twitter.com/andrewparkk" class="link"
+                        target="_blank"> Twitter</a>.</p>
                 <!-- <p>Born in Texas, I moved and grew up in a suburban city right outside of Louisville, unaware of what was outside this small town. As I grew up, I understood what was possible, realizing there’s much more to the world than I thought. With
                     a spark of interest that reached outside of school and academia, I started to pursue my own projects and research. </p> -->
-
                 <br>
                 <p>Cheers,</p>
                 <p>Andrew Park</p>
